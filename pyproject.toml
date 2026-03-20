@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "cmdhint"
+version = "1.0.0"
+description = "Mac/Linux 命令动态提示工具 - 输入命令前缀即可获取智能提示和说明"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "CmdHint"},
+]
+dependencies = [
+    "prompt_toolkit>=3.0.0",
+]
+
+[project.scripts]
+cmdhint = "cmdhint.cmdhint:main"
+
+[tool.setuptools.packages.find]
+include = ["cmdhint*"]
